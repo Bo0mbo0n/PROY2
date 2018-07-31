@@ -1,0 +1,46 @@
+<!--div class="row">
+
+    <div class="col">
+        <h1>*ngIf*</h1>
+        <hr></hr>
+
+    </div>
+
+
+    <div class="col">
+        <h1>*ngFor*</h1>
+        <hr></hr>
+    </div>
+</div-->
+
+<div class="row" style="margin-left: 150px;">
+
+    <div class="col">
+        <h1>*ngIf</h1>
+        <div *ngIf="Mostrar" class="card text-white bg-info mb-3" style="max-width: 18rem;">
+            <!--div class="card-header">Header</div-->
+            <div class="card-body">
+                <h5 class="card-title">{{frase.autor}}</h5>
+                <p class="card-text">{{frase.mensaje}}</p>
+            </div>
+        </div>
+
+        <button (click)="Mostrar=!Mostrar" class="btn btn-info">
+            Mostrar/Ocultar
+        </button>
+
+
+    </div>
+
+
+    <div class=" col ">
+        <h1>*ngFor</h1>
+
+        <ul class="list-group ">
+            <li *ngFor="let Minion of Minions; let i= index " class="list-group-item ">
+                {{i+1}} {{ Minion }}
+            </li>
+        </ul>
+
+    </div>
+</div>
